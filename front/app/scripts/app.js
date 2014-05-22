@@ -12,6 +12,10 @@ angular.module('respyManagerApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/reservas', {
+        templateUrl: 'views/reservas.html',
+        controller: 'ReservasCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
