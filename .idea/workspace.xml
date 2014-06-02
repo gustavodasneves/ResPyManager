@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="323514f9-5fe1-4677-94fe-32fdf11c986d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/app/views/dashboard.html" afterPath="$PROJECT_DIR$/front/app/views/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/app/views/templates/footer.html" afterPath="$PROJECT_DIR$/front/app/views/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/front/app/scripts/controllers/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/turno.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ResPyManager.iws" />
@@ -76,8 +74,10 @@
       <file leaf-file-name="dashboard.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front/app/views/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="20" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.72440946" vertical-offset="369" max-vertical-offset="825">
-              <folding />
+            <state line="43" column="20" selection-start="1164" selection-end="1185" vertical-scroll-proportion="0.7217848" vertical-offset="310" max-vertical-offset="765">
+              <folding>
+                <element signature="tag#thead#0;tag#table#0;tag#div#1;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -697,8 +697,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/app/views/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="20" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.72440946" vertical-offset="369" max-vertical-offset="825">
-          <folding />
+        <state line="43" column="20" selection-start="1164" selection-end="1185" vertical-scroll-proportion="0.7217848" vertical-offset="310" max-vertical-offset="765">
+          <folding>
+            <element signature="tag#thead#0;tag#table#0;tag#div#1;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
