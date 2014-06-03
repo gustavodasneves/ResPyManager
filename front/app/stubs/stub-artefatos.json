@@ -1,0 +1,29 @@
+{
+    "item": [
+        {
+            "Artefato": "Retroprojetor",
+            "Professor": "Giovanni",
+            "Turno": "Noite"
+        },
+        {
+            "Artefato": "Caneta",
+            "Professor": "Giovanni",
+            "Turno": "Manhã"
+        },
+        {
+            "Artefato": "Testes",
+            "Professor": "Giovanni",
+            "Turno": "Manhã"
+        },
+        {
+            "Artefato": "Pc",
+            "Professor": "Giovanni",
+            "Turno": "Tarde"
+        },
+        {
+            "Artefato": "Sei lá",
+            "Professor": "Giovanni",
+            "Turno": "Tarde"
+        }
+    ]
+}
