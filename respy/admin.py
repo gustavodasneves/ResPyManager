@@ -1,12 +1,26 @@
 from django.contrib import admin
 
 # Register your models here.
-from respy.models import Agendamento, Turno, HorarioPeriodo
+from respy.models import Local,Equipamento,Aluguel
 
-class TurnoAdmin(admin.ModelAdmin):
-    fields = ('nome', 'inicio',)
-    list_display = ('turno_id', 'nome', 'inicio', )
 
-admin.site.register(Agendamento)
-admin.site.register(Turno, TurnoAdmin)
-admin.site.register(HorarioPeriodo)
+class LocalAdmin(admin.ModelAdmin):
+    fields = ('local_id','nome')
+    list_display = ('local_id','nome')
+
+class EquipamentoAdmin(admin.ModelAdmin):
+    fields = ('equipamento_id','nome')
+    list_display = ('equipamento_id','nome')
+
+class AluguelAdmin(admin.ModelAdmin):
+    fields = ('aluguel_id','local_id','equipamento_id','user_id','datahorainicio','datahorafim','ativo')
+    list_display = ('aluguel_id','local_id','equipamento_id','user_id','datahorainicio','datahorafim','ativo')
+
+
+admin.site.register(Local,LocalAdmin )
+admin.site.register(Equipamento, EquipamentoAdmin)
+admin.site.register(Aluguel,AluguelAdmin)
+
+
+
+
