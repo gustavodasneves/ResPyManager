@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('respyManagerApp')
-  .controller('DashboardCtrl', function ($scope, $http) {
-		$scope.graphic = "Aqui está um grafico";
+  .controller('DashboardCtrl', function ($scope, $http, Appfacade) {
+		$scope.graphic = "Gráfico";
 
-    	$http({method : 'GET', url : 'stubs/stub-artefatos.json'})
+    	$http({method : 'GET', url : Appfacade.mountUri('equipamentos') })
     	.success(function(data){
-    		//console.log(data);
+    		console.log(appfacade.uri);
     		$scope.itens = data.item;
     	});
   });
