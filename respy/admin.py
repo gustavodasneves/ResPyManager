@@ -19,8 +19,8 @@ class AluguelAdmin(admin.ModelAdmin):
     list_display = ('aluguel_id','local_id','equipamento_id','funcionario_id','datahorainicio','datahorafim','ativo')
 
 class FuncionarioAdmin(admin.ModelAdmin):
-    fields = ('nome',)
-    list_display = ('funcionario_id','nome')
+    fields = ('nome','email',)
+    list_display = ('funcionario_id','nome', 'email')
     search_fields = ['name']
 
 admin.site.register(Local,LocalAdmin)

@@ -10,7 +10,7 @@
 	<li>
 	{{ aluguel.equipamento_id }} alugado por {{ aluguel.funcionario_id }} no local {{ aluguel.local_id }}
 	<br/>
-	<small>{{ aluguel.datahorainicio }} até {{ aluguel.datahorafim }}</small>
+	<small><b>{{ aluguel.datahorainicio|date:'d/m/Y H:i' }} até {{ aluguel.datahorafim|date:'d/m/Y H:i' }}</b></small>
 	</li>
 	{% endfor %}
 </ul>

@@ -1,9 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-# Create your models here.
-#teste DVCS
-
 class Local (models.Model):
     local_id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100)
@@ -20,6 +17,7 @@ class Equipamento (models.Model):
 class Funcionario (models.Model):
     funcionario_id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
     def __unicode__(self):
         return self.nome
 
