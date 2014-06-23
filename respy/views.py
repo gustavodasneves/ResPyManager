@@ -1,15 +1,10 @@
-from django.core import serializers
-from django.shortcuts import render
-from respy.models import Equipamento
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from respy.models import *
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("This is the index view")
+    alugueisAtivos = Aluguel.objects.filter(ativo = True)
+    context = {'alugueis' : alugueisAtivos, 'alguelLen' : alugueisAtivos.__len__()}
+    return render_to_response('index.html', context, context_instance=RequestContext(request))
 
-def equipamentos(request):
-    lista_equipamentos = Equipamento.objects.all()
-    data = serializers.serialize("json", lista_equipamentos)
-    return HttpResponse(data, content_type = "application/json")
-
-def inserir_equipamento(request):
-    request._body

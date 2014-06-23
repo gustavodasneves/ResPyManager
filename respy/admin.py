@@ -7,10 +7,12 @@ from respy.models import Local,Equipamento,Aluguel,Funcionario
 class LocalAdmin(admin.ModelAdmin):
     fields = ('nome',)
     list_display = ('local_id','nome')
+    search_fields = ['name']
 
 class EquipamentoAdmin(admin.ModelAdmin):
     fields = ('nome',)
-    list_display = ('equipamento_id','nome')
+    list_display = ('nome', 'equipamento_id')
+    search_fields = ['name']
 
 class AluguelAdmin(admin.ModelAdmin):
     fields = ('local_id','equipamento_id','funcionario_id','datahorainicio','datahorafim','ativo',)
@@ -19,7 +21,7 @@ class AluguelAdmin(admin.ModelAdmin):
 class FuncionarioAdmin(admin.ModelAdmin):
     fields = ('nome',)
     list_display = ('funcionario_id','nome')
-
+    search_fields = ['name']
 
 admin.site.register(Local,LocalAdmin)
 admin.site.register(Equipamento, EquipamentoAdmin)

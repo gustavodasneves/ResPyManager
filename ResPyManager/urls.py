@@ -8,7 +8,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'ResPyManager.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', views.index, name="index"),
+    url(r'^$', views.index, name="index.html"),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^equipamentos/', 'respy.views.equipamentos'),
 )

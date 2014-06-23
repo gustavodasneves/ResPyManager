@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if alguelLen > 0 %}
+<h2>Alugueis ativos</h2>
+{% endif %}
+
+<ul>
+	{% for aluguel in alugueis %}
+	<li>
+	{{ aluguel.equipamento_id }} alugado por {{ aluguel.funcionario_id }} no local {{ aluguel.local_id }}
+	<br/>
+	<small>{{ aluguel.datahorainicio }} até {{ aluguel.datahorafim }}</small>
+	</li>
+	{% endfor %}
+</ul>
+
+{% endblock %}
