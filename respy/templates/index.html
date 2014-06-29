@@ -1,18 +1,55 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if alguelLen > 0 %}
-<h2>Alugueis ativos</h2>
-{% endif %}
-
-<ul>
-	{% for aluguel in alugueis %}
-	<li>
-	{{ aluguel.equipamento_id }} alugado por {{ aluguel.funcionario_id }} no local {{ aluguel.local_id }}
-	<br/>
-	<small><b>{{ aluguel.datahorainicio|date:'d/m/Y H:i' }} até {{ aluguel.datahorafim|date:'d/m/Y H:i' }}</b></small>
-	</li>
-	{% endfor %}
-</ul>
-
+    {% if alguelLen > 0 %}
+        <h2>Aluguéis ativos</h2>
+    {% else %}
+        <h1>Não há aluguéis ativos</h1>
+    {% endif %}
+    <hr/>
+    <table class="table table-bordered table-striped">
+    <tr>
+        <th>Equipamento</th>
+        <th>Alugado por</th>
+        <th>No local</th>
+        <th>Ficará utilizada de</th>
+        <th>Até</th>
+        {% if user.is_authenticated %}
+        <th>Ações</th>
+        {% endif %}
+    </tr>
+    {% for aluguel in alugueis %}
+        <tr>
+        <td>
+            {{ aluguel.equipamento_id }}
+        </td>
+            <td>
+                {{ aluguel.funcionario_id }}
+            </td>
+            <td>
+                {{ aluguel.local_id }}
+            </td>
+            <td>
+                {{ aluguel.datahorainicio|date:'d/m/Y H:i' }}
+            </td>
+            <td>{{ aluguel.datahorafim|date:'d/m/Y H:i' }}</td>
+            {% if user.is_authenticated %}
+            <td>
+                <a href="/marcarComoConcluido" title="Concluir">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </a>
+                |
+                <a href="/marcarComoConcluido" title="Excluir">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </td>
+        {% endif %}
+        </tr>
+    {% endfor %}
+    </table>
+    {% if user.is_authenticated %}
+        <div class="col-md-3 col-md-offset-9">
+            <a href="/novoAluguel" class="btn btn-primary">Adicionar novo aluguel</a>
+        </div>
+    {% endif %}
 {% endblock %}
