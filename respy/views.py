@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from respy.forms import AluguelForm
 from respy.models import *
@@ -25,5 +25,14 @@ def novoAluguel(request):
 
 
 @login_required
-def excluirAluguel(request)
-    
+def finalizarAluguel(request, id_aluguel):
+    aluguel = Aluguel.objects.filter(aluguel_id=id_aluguel)
+    aluguel.update(ativo=False)
+    redirect("/")
+
+
+@login_required
+def excluirAluguel(request, id_aluguel):
+    aluguel = Aluguel.objects.filter(aluguel_id=id_aluguel)
+    aluguel.delete()
+    redirect("/")

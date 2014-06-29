@@ -1,14 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <table class="table table-bordered table-striped">
     {% if alguelLen > 0 %}
         <h2>Aluguéis ativos</h2>
-    {% else %}
-        <h1>Não há aluguéis ativos</h1>
-    {% endif %}
-    <hr/>
-    <table class="table table-bordered table-striped">
-    <tr>
+        <hr/>
+        <tr>
         <th>Equipamento</th>
         <th>Alugado por</th>
         <th>No local</th>
@@ -16,8 +13,13 @@
         <th>Até</th>
         {% if user.is_authenticated %}
         <th>Ações</th>
+            </tr>
         {% endif %}
-    </tr>
+    {% else %}
+        <h1>Não há aluguéis ativos</h1>
+    {% endif %}
+
+
     {% for aluguel in alugueis %}
         <tr>
         <td>
@@ -35,11 +37,11 @@
             <td>{{ aluguel.datahorafim|date:'d/m/Y H:i' }}</td>
             {% if user.is_authenticated %}
             <td>
-                <a href="/marcarComoConcluido" title="Concluir">
+                <a href="/finalizarAluguel/{{ aluguel.aluguel_id }}" title="Concluir">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
                 |
-                <a href="/marcarComoConcluido" title="Excluir">
+                <a href="/excluirAluguel/{{ aluguel.aluguel_id }}" title="Excluir">
                     <span class="glyphicon glyphicon-remove"></span>
                 </a>
             </td>
