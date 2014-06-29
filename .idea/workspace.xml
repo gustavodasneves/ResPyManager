@@ -4,7 +4,7 @@
     <list default="true" id="323514f9-5fe1-4677-94fe-32fdf11c986d" name="Default" comment="Updated views(using django views now, not angular js) and create any screens">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/respy/templates/index.html" afterPath="$PROJECT_DIR$/respy/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResPyManager/urls.py" afterPath="$PROJECT_DIR$/ResPyManager/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/respy/templates/novoAluguel.html" afterPath="$PROJECT_DIR$/respy/templates/novoAluguel.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/respy/views.py" afterPath="$PROJECT_DIR$/respy/views.py" />
     </list>
     <ignored path="ResPyManager.iws" />
@@ -28,6 +28,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/respy/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="9" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.53501403" vertical-offset="1050" max-vertical-offset="1445">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/respy/forms.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,7 +49,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/respy/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="6" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="731">
+            <state line="23" column="6" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -49,7 +58,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/respy/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="20" selection-start="973" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="731">
+            <state line="8" column="65" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="799">
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -69,7 +78,7 @@
       <file leaf-file-name="novoAluguel.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/respy/templates/novoAluguel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="306">
+            <state line="8" column="22" selection-start="250" selection-end="250" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -79,15 +88,6 @@
         <entry file="file://$PROJECT_DIR$/respy/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="40" column="93" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-6.3076925" vertical-offset="516" max-vertical-offset="1020">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/respy/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="54" selection-start="101" selection-end="101" vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -123,10 +123,10 @@
         <option value="C:/Python34/Lib/site-packages/django/contrib/auth/views.py" />
         <option value="$PROJECT_DIR$/respy/models.py" />
         <option value="$PROJECT_DIR$/respy/forms.py" />
-        <option value="$PROJECT_DIR$/respy/templates/novoAluguel.html" />
         <option value="$PROJECT_DIR$/respy/admin.py" />
         <option value="$PROJECT_DIR$/respy/templates/base.html" />
         <option value="$PROJECT_DIR$/ResPyManager/urls.py" />
+        <option value="$PROJECT_DIR$/respy/templates/novoAluguel.html" />
         <option value="$PROJECT_DIR$/respy/views.py" />
         <option value="$PROJECT_DIR$/respy/templates/index.html" />
       </list>
@@ -901,13 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/respy/templates/novoAluguel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/respy/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="93" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-6.3076925" vertical-offset="516" max-vertical-offset="1020">
@@ -924,12 +917,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/respy/views.py">
+    <entry file="file://$PROJECT_DIR$/respy/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="20" selection-start="973" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="731">
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
+        <state line="23" column="6" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="748">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -940,16 +931,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/respy/models.py">
+    <entry file="file://$PROJECT_DIR$/respy/templates/novoAluguel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="748">
+        <state line="8" column="22" selection-start="250" selection-end="250" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="408">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/respy/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="65" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="799">
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/respy/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="54" selection-start="101" selection-end="101" vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="1054">
+        <state line="73" column="9" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.53501403" vertical-offset="1050" max-vertical-offset="1445">
           <folding />
         </state>
       </provider>
