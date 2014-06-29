@@ -10,6 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^$', views.index, name="index.html"),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^novoaluguel/', views.novoAluguel, name="novoaluguel.html"),
-    url(r'^accounts/login/', views.novoAluguel, name="novoaluguel.html"),
+    url(r'^novoAluguel/', views.novoAluguel, name="novoaluguel.html"),
+    url(r'^finalizarAluguel/', views.finalizarAluguel),
+    url(r'^excluirAluguel/', views.excluirAluguel),
 )

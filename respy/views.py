@@ -24,3 +24,6 @@ def novoAluguel(request):
     return render_to_response('novoAluguel.html', {'form': form, 'response': response}, RequestContext(request))
 
 
+@login_required
+def excluirAluguel(request)
+    
