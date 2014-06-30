@@ -1,11 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
-<<<<<<< HEAD
 import model_report
-=======
 from respy.forms import AluguelForm
->>>>>>> c6837c3bd908e7fd08d83aa2e9b183b635bbc95b
 from respy.models import *
 
 
@@ -18,11 +15,9 @@ def index(request):
         'alugueisFinalizados': alugueisFinalizados,
     }
     return render_to_response('index.html', context, context_instance=RequestContext(request))
-<<<<<<< HEAD
-=======
 
 @login_required
-def novoAluguel(request):
+def novoaluguel(request):
     if request.method == 'POST':
         form = AluguelForm(request.POST)
         if form.is_valid():
@@ -31,10 +26,10 @@ def novoAluguel(request):
         else:
             response = {'Message': 'Erro ao inserir novo aluguel', 'Success': True }
     else:
-        response = {'Message': 'Nada até aqui ocorreu', 'Success': False }
+        response = {'Message': 'Nada ate aqui ocorreu', 'Success': False }
 
     form = AluguelForm()
-    return render_to_response('novoAluguel.html', {'form': form, 'response': response}, RequestContext(request))
+    return render_to_response('novoaluguel.html', {'form': form, 'response': response}, RequestContext(request))
 
 
 @login_required
@@ -48,4 +43,3 @@ def excluirAluguel(request, id_aluguel):
     aluguel = Aluguel.objects.filter(aluguel_id=id_aluguel)
     aluguel.delete()
     return redirect('/')
->>>>>>> c6837c3bd908e7fd08d83aa2e9b183b635bbc95b
