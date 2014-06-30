@@ -5,10 +5,8 @@ from respy.models import *
 
 class AluguelForm(ModelForm):
     def is_valid(self):
-        # run the parent validation first
         valid = super(AluguelForm, self).is_valid()
 
-        # we're done now if not valid
         if not valid:
             return valid
 
