@@ -14,9 +14,9 @@ urlpatterns = patterns('',
 
     url(r'^$', views.index, name="index.html"),
     url(r'^admin/', include(admin.site.urls)),
-	(r'', include('model_report.urls')),
     url(r'^admin/$', include(admin.site.urls)),
-    url(r'^novoAluguel/$', views.novoaluguel),
+    url(r'^novoAluguel/', views.novoaluguel),
     url(r'^excluirAluguel/(?P<id_aluguel>.*)/$', views.excluirAluguel),
     url(r'^finalizarAluguel/(?P<id_aluguel>.*)/$', views.finalizarAluguel),
+	url(r'', include('model_report.urls')),
 )
