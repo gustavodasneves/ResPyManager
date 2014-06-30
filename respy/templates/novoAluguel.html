@@ -2,16 +2,16 @@
 {% block content %}
     {% if response.Success == True %}
         <p>
-        {{ response.Message }}
+            {{ response.Message }}
         </p>
         <p>
             <a href="/novoAluguel" class="btn btn-primary">Inserir novo</a>
             <a href="/" class="btn">Voltar</a>
         </p>
-            {% else %}
+    {% else %}
 
-        <form method="post">{% csrf_token %}
-        {{ form.as_p }}
+        <form method="post" class="form-group">{% csrf_token %}
+            {{ form.as_p }}
             <input type="submit" value="Enviar"/>
         </form>
 

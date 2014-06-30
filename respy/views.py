@@ -20,8 +20,9 @@ def novoAluguel(request):
         form = AluguelForm(request.POST)
         if form.is_valid():
             form.save()
-
-            response = {'Message': 'Aluguel dnserido com sucesso', 'Success': True }
+            response = {'Message': 'Aluguel inserido com sucesso', 'Success': True }
+        else:
+            response = {'Message': 'Erro ao inserir novo aluguel', 'Success': True }
     else:
         response = {'Message': 'Nada até aqui ocorreu', 'Success': False }
 
