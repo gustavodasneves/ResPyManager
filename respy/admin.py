@@ -14,10 +14,6 @@ class EquipamentoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'equipamento_id')
     search_fields = ['name']
 
-class AluguelAdmin(admin.ModelAdmin):
-    fields = ('local_id','equipamento_id','funcionario_id','datahorainicio','datahorafim','ativo',)
-    list_display = ('aluguel_id','local_id','equipamento_id','funcionario_id','datahorainicio','datahorafim','ativo')
-
 class FuncionarioAdmin(admin.ModelAdmin):
     fields = ('nome','email',)
     list_display = ('funcionario_id','nome', 'email')
@@ -25,7 +21,6 @@ class FuncionarioAdmin(admin.ModelAdmin):
 
 admin.site.register(Local,LocalAdmin)
 admin.site.register(Equipamento, EquipamentoAdmin)
-admin.site.register(Aluguel,AluguelAdmin)
 admin.site.register(Funcionario, FuncionarioAdmin)
 
 
